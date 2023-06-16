@@ -38,4 +38,4 @@ jobs:
         break_build: true
         scanners: sca
         bug_tracker: WAIT
-        params: --namespace=${{ github.repository_owner }} --checkmarx.settings-override=true --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref_name }} --repo-url="https://github.com/james-bostock-cx/cxflow-github-action-test"
+        params: --namespace=${{ github.repository_owner }} --checkmarx.settings-override=true --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref_name }} --repo-url="https://github.com/james-bostock-cx/cxflow-github-action-test" --sca.manifests-include-pattern='module-a/*.xml'
