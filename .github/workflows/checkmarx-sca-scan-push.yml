@@ -48,7 +48,7 @@ jobs:
             --sca.filter-out-dev-dependency=true
             --sca.thresholds-severity.HIGH=10
     - name: Upload SARIF files
-      uses: github/codeql-action/upload-sarif@v1
+      uses: github/codeql-action/upload-sarif@v2
       with:
         sarif_file: cx.sarif
       
