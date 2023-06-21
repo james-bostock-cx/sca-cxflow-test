@@ -46,3 +46,4 @@ jobs:
             --repo-url="https://github.com/james-bostock-cx/cxflow-github-action-test"
             --sca.manifests-include-pattern=module-a/*.xml
             --sca.filter-out-dev-dependency=true
+            --sca.thresholds-severity.HIGH=2
