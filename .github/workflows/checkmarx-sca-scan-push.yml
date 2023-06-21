@@ -37,7 +37,7 @@ jobs:
         team: ${{ secrets.CHECKMARX_SCA_TEAM }}
         break_build: true
         scanners: sca
-        bug_tracker: WAIT
+        bug_tracker: Sarif
         params: >-
             --namespace=${{ github.repository_owner }}
             --checkmarx.settings-override=true
@@ -47,3 +47,8 @@ jobs:
             --sca.manifests-include-pattern=module-a/*.xml
             --sca.filter-out-dev-dependency=true
             --sca.thresholds-severity.HIGH=2
+    - name: Upload SARIF files
+      uses: github/codeql-action/upload-sarif@v1
+      with:
+        sarif_file: cx.sarif
+      
