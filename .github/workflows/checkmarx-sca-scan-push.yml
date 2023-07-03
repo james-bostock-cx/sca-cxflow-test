@@ -49,6 +49,7 @@ jobs:
             --repo-url="https://github.com/james-bostock-cx/cxflow-github-action-test"
             --sca.thresholds-severity.HIGH=5
             --sca.filter-out-dev-dependency=true
+            --sca.filter-dependency-type=Direct
     - name: Upload SARIF files
       uses: github/codeql-action/upload-sarif@v2
       with:
