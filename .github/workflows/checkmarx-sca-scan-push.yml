@@ -50,6 +50,7 @@ jobs:
             --sca.thresholds-severity.HIGH=5
             --sca.filter-out-dev-dependency=true
             --sca.filter-dependency-type=Direct
+            --sca.manifests-include-pattern=!module_b/*.xml
     - name: Upload SARIF files
       uses: github/codeql-action/upload-sarif@v2
       with:
