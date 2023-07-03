@@ -47,7 +47,7 @@ jobs:
             --repo-name=${{ github.event.repository.name }}
             --branch=${{ github.ref_name }}
             --repo-url="https://github.com/james-bostock-cx/cxflow-github-action-test"
-            --sca.thresholds-severity.HIGH=10
+            --sca.thresholds-severity.HIGH=5
     - name: Upload SARIF files
       uses: github/codeql-action/upload-sarif@v2
       with:
