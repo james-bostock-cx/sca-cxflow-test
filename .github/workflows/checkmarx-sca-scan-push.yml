@@ -41,6 +41,7 @@ jobs:
         scanners: sca
         bug_tracker: Sarif
         params: >-
+            --logging.level.com.checkmarx=DEBUG
             --namespace=${{ github.repository_owner }}
             --checkmarx.settings-override=true
             --repo-name=${{ github.event.repository.name }}
