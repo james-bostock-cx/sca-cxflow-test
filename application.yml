@@ -1,0 +1,26 @@
+sca:
+  appUrl: https://sca.checkmarx.net
+  apiUrl: https://api-sca.checkmarx.net
+  accessControlUrl: https://platform.checkmarx.net
+  tenant: SCA-Champions
+  username: jsb-sca-resolver
+  password: "Z&2criminy"
+  team: /CxServer/SCA-PM/Champions
+  manifests-include-pattern: "module-a/*.xml"
+  filter-out-dev-dependency: true
+  filter-severity:
+    - Medium
+    - Low
+  thresholds-severity:
+    HIGH: 0
+
+cxflow:
+  bug-tracker: WAIT
+  enabled-vulnerability-scanners:
+    - sca
+
+logging:
+  level:
+    com:
+      checkmarx:
+        flow: DEBUG
